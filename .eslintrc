@@ -9,7 +9,8 @@
     "semi":"off",
     "arrow-parens":"off",
     "comma-dangle":"off",
-    "require-jsdoc":"off"
+    "require-jsdoc":"off",
+    "guard-for-in":"off"
   },
   "extends": ["eslint:recommended", "google"]
 }
