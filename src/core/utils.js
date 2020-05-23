@@ -20,3 +20,23 @@ export function range(start, end) {
       .fill('')
       .map((_, index)=>start + index)
 }
+
+/**
+ * @function storage
+ * @param {String} key
+ * @param {Object} data
+ */
+
+export function storage(key, data=null) {
+  if (!data) {
+    return JSON.parse(localStorage.getItem(key))
+  }
+  localStorage.setItem(key, JSON.stringify(data))
+}
+
+export function isEqual(a, b) {
+  if (typeof a === 'object' && typeof b === 'object') {
+    return JSON.stringify(a) === JSON.stringify(b)
+  }
+  return a === b
+}
